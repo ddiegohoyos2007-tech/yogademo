@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Estudio Mareas | Pilates y yoga en Barranco</title>
+<meta name="description" content="Pilates reformer, pilates mat y yoga en grupos de 6 personas en Barranco, Lima. Tu primera clase es gratis.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#EDF2F4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1C20">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PE">
+<meta property="og:title" content="Estudio Mareas | Pilates y yoga en grupos de seis">
+<meta property="og:description" content="Pilates reformer, mat y yoga en Barranco, Lima. Tu primera clase es gratis.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232F6F73'/%3E%3Cpath d='M8 38c8-10 16 10 24 0s16 10 24 0' fill='none' stroke='%23E8B04B' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Diseño: página de una columna con una ola de líneas detrás del titular, horario por día y planes en filas. */
+:root{
+  --bg:#EDF2F4;--surface:#FFFFFF;--ink:#16282E;--muted:#51636A;--line:#D3DEE2;
+  --accent:#2F6F73;--accent-press:#265B5E;--on-accent:#FFFFFF;--sand:#E8B04B;--on-sand:#16282E;
+  --header:rgba(237,242,244,.86);
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1C20;--surface:#16272C;--ink:#E8F0F2;--muted:#9DB2B8;--line:#28403F;--accent:#5FB3B3;--accent-press:#4E9C9C;--on-accent:#0F1C20;--header:rgba(15,28,32,.86);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1C20;--surface:#16272C;--ink:#E8F0F2;--muted:#9DB2B8;--line:#28403F;--accent:#5FB3B3;--accent-press:#4E9C9C;--on-accent:#0F1C20;--header:rgba(15,28,32,.86);color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:inherit}
+a,button,summary{touch-action:manipulation}
+button,.btn,summary,.days button{-webkit-user-select:none;user-select:none}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left,0px)) max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h2{font-size:clamp(1.9rem,5vw,2.9rem);font-weight:800}
+h3{font-size:1.25rem;font-weight:600}
+p{margin:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:50;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+.skip:focus{top:12px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--sand);outline-offset:3px}
+
+/* Botones: respuesta inmediata al presionar (:active), hover solo con mouse */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:12px;font:700 1rem var(--body);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform 140ms var(--ease-out),background-color 140ms,color 140ms}
+.btn:active{transform:scale(.97)}
+.btn.main{background:var(--accent);color:var(--on-accent)}
+.btn.main:active{background:var(--accent-press)}
+.btn.line{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn.line:active{background:var(--line)}
+.btn.small{min-height:44px;padding:0 16px;font-size:.92rem}
+.btn svg{width:20px;height:20px;flex:none}
+@media (hover:hover) and (pointer:fine){
+  .btn.main:hover{background:var(--accent-press)}
+  .btn.line:hover{background:var(--ink);color:var(--bg)}
+  nav.links a:hover{color:var(--ink)}
+  .days button:hover{border-color:var(--ink)}
+  .faq summary:hover{color:var(--accent)}
+}
+
+/* Cabecera fija */
+.topbar{position:sticky;top:0;z-index:20;background:var(--header);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color 200ms}
+.topbar.scrolled{border-bottom-color:var(--line)}
+header.top{padding-block:10px;display:flex;gap:12px 24px;align-items:center;justify-content:space-between}
+.brand{font:800 1.3rem var(--display);text-decoration:none;letter-spacing:-.01em;display:inline-flex;align-items:center;gap:10px;min-height:44px}
+.brand svg{width:28px;height:28px}
+nav.links{display:none;gap:6px 22px}
+nav.links a{text-decoration:none;color:var(--muted);font-weight:500;min-height:44px;display:inline-flex;align-items:center}
+.top .btn{min-height:40px;padding:0 14px;font-size:.9rem}
+@media (min-width:760px){nav.links{display:flex}}
+
+/* Portada */
+.hero{position:relative;overflow:hidden;padding-block:clamp(36px,8vw,88px) clamp(120px,18vw,200px)}
+.hero .wave{position:absolute;left:0;right:0;bottom:0;width:100%;height:clamp(110px,18vw,200px);z-index:0}
+.hero .wrap{position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem;color:var(--accent);margin-bottom:16px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sand)}
+.hero h1{font-size:clamp(2.6rem,9vw,5.6rem);font-weight:800;max-width:14ch}
+.hero .sub{margin-top:22px;max-width:46ch;color:var(--muted);font-size:1.12rem}
+.hero .cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.facts{margin:34px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px 28px;color:var(--muted);font-weight:500;font-size:.98rem}
+.facts li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--sand);margin-right:10px}
+@media (prefers-reduced-motion:no-preference){
+  .wave path{animation:drift 14s ease-in-out infinite alternate}
+  .wave path:nth-child(2){animation-duration:18s}
+  .wave path:nth-child(3){animation-duration:22s}
+  @keyframes drift{to{transform:translateX(-40px)}}
+}
+
+section{padding-block:clamp(48px,8vw,88px)}
+section.alt{background:var(--surface)}
+.head{display:grid;gap:12px;margin-bottom:34px;max-width:60ch}
+.head p{color:var(--muted)}
+
+/* Clases */
+.classes{display:grid;border-top:1px solid var(--line)}
+.cls{display:grid;gap:6px 24px;padding:20px 0;border-bottom:1px solid var(--line)}
+.cls .meta{color:var(--accent);font-weight:700;font-size:.95rem}
+.cls p{color:var(--muted);max-width:56ch}
+.cls .start{display:inline-block;margin-top:6px;font-size:.78rem;font-weight:700;padding:2px 10px;border-radius:99px;background:var(--sand);color:var(--on-sand)}
+@media (min-width:720px){.cls{grid-template-columns:260px 1fr;align-items:baseline}}
+
+/* Horarios */
+.days{display:flex;gap:8px;margin:0 -20px 22px;padding:2px 20px 6px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;overscroll-behavior-x:contain}
+.days::-webkit-scrollbar{display:none}
+.days button{flex:none;scroll-snap-align:start;min-height:46px;padding:0 18px;border-radius:99px;border:1.5px solid var(--line);background:transparent;color:var(--ink);font:500 1rem var(--body);cursor:pointer;transition:transform 120ms var(--ease-out),background-color 120ms,border-color 120ms}
+.days button:active{transform:scale(.96)}
+.days button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.days button small{font-size:.72rem;font-weight:700;margin-left:6px;color:var(--sand)}
+@media (min-width:620px){.days{flex-wrap:wrap;overflow:visible;margin-inline:0;padding-inline:0}}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:-8px 0 22px}
+.filters button{min-height:38px;padding:0 14px;border-radius:99px;border:1px dashed var(--line);background:transparent;color:var(--muted);font:500 .9rem var(--body);cursor:pointer}
+.filters button[aria-pressed="true"]{border-style:solid;border-color:var(--accent);color:var(--accent);font-weight:700}
+.slots{display:grid;gap:10px}
+.slot{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--bg)}
+.slot.full{opacity:.6}
+.slot .time{font:800 1.5rem var(--display);font-variant-numeric:tabular-nums}
+.slot .what{min-width:0}
+.slot .what b{display:block}
+.slot .what span{color:var(--muted);font-size:.93rem}
+.slot .go{grid-column:1 / -1}
+.cupos{display:inline-block;margin-left:8px;font-size:.82rem;font-weight:700;padding:1px 9px;border-radius:99px;background:var(--line);color:var(--ink)}
+.cupos.few{background:var(--sand);color:var(--on-sand)}
+.empty{padding:22px 16px;border:1px dashed var(--line);border-radius:14px;color:var(--muted)}
+@media (min-width:620px){.slot{grid-template-columns:auto 1fr auto}.slot .go{grid-column:auto}}
+@media (prefers-reduced-motion:no-preference){.slot{animation:rise 260ms var(--ease-out) both}@keyframes rise{from{opacity:0;transform:translateY(6px)}}}
+.note{margin-top:16px;color:var(--muted);font-size:.9rem}
+
+/* Planes */
+.plans{border-top:1px solid var(--line)}
+.plan{display:grid;grid-template-columns:1fr auto;gap:10px 24px;padding:22px 0;border-bottom:1px solid var(--line);align-items:center}
+.plan .price{font:800 1.9rem var(--display);font-variant-numeric:tabular-nums;text-align:right}
+.plan .what span{color:var(--muted);display:block}
+.plan .what .tag{display:inline-block;margin-left:8px;font-size:.78rem;font-weight:700;padding:2px 10px;border-radius:99px;background:var(--sand);color:var(--on-sand);vertical-align:middle;font-family:var(--body);letter-spacing:0}
+.plan .btn{grid-column:1 / -1}
+@media (min-width:720px){.plan{grid-template-columns:1fr auto 130px}.plan .btn{grid-column:auto}}
+
+/* Estudio */
+.about{display:grid;gap:28px}
+.about dl{margin:0;display:grid;gap:18px}
+.about dt{font-weight:700}
+.about dd{margin:2px 0 0;color:var(--muted)}
+@media (min-width:820px){.about{grid-template-columns:1fr 1fr;gap:56px}.about dl{grid-template-columns:1fr 1fr}}
+
+/* Preguntas frecuentes */
+.faq{border-top:1px solid var(--line);max-width:760px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px;padding:14px 0;font-weight:700;font-size:1.05rem;transition:color 140ms}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:12px;height:12px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-3px) rotate(45deg);transition:transform 200ms var(--ease-out)}
+.faq details[open] summary::after{transform:translateY(3px) rotate(-135deg)}
+.faq details p{padding:0 0 18px;color:var(--muted);max-width:62ch}
+
+/* Reserva */
+.reserve .box{background:var(--accent);color:var(--on-accent);border-radius:22px;padding:clamp(28px,6vw,56px)}
+.reserve h2{max-width:16ch}
+.reserve p{margin-top:14px;max-width:46ch;opacity:.92}
+.reserve .btn{margin-top:24px;background:var(--sand);color:var(--on-sand)}
+
+footer{padding-block:34px calc(96px + var(--safe-b));color:var(--muted);font-size:.92rem}
+footer .wrap{display:grid;gap:6px}
+@media (min-width:760px){footer{padding-bottom:56px}}
+
+/* Botón flotante de WhatsApp (solo celular) */
+.float{position:fixed;left:16px;right:16px;bottom:calc(14px + var(--safe-b));z-index:30;box-shadow:0 10px 30px -8px rgba(0,0,0,.35);transform:translateY(0);transition:transform 240ms var(--ease-out),opacity 240ms;}
+.float.hide{transform:translateY(140%);opacity:0;pointer-events:none}
+@media (min-width:760px){.float{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.float,.btn,.days button{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#clases">Saltar al contenido</a>
+
+<div class="topbar" id="topbar">
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="#inicio" aria-label="Estudio Mareas, inicio">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="var(--accent)"/><path d="M8 38c8-10 16 10 24 0s16 10 24 0" fill="none" stroke="var(--sand)" stroke-width="5" stroke-linecap="round"/></svg>
+        Estudio Mareas
+      </a>
+      <nav class="links" aria-label="Secciones">
+        <a href="#clases">Clases</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#planes">Planes</a>
+        <a href="#estudio">El estudio</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <a class="btn main" data-wa data-msg="Hola, quiero reservar mi clase de prueba gratis en Estudio Mareas." href="#reservar">Reservar</a>
+    </header>
+  </div>
+</div>
+
+<main id="inicio">
+  <div class="hero">
+    <svg class="wave" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M-60 120 C90 60 300 180 450 120 S750 60 900 120 S1100 170 1260 110" fill="none" stroke="var(--line)" stroke-width="2"/>
+      <path d="M-60 145 C90 85 300 205 450 145 S750 85 900 145 S1100 195 1260 135" fill="none" stroke="var(--line)" stroke-width="2"/>
+      <path d="M-60 170 C90 110 300 230 450 170 S750 110 900 170 S1100 220 1260 160" fill="none" stroke="var(--sand)" stroke-width="2.5"/>
+    </svg>
+    <div class="wrap">
+      <p class="eyebrow">Barranco, Lima · Lunes a sábado</p>
+      <h1>Pilates y yoga en grupos de seis.</h1>
+      <p class="sub">Clases guiadas con un nivel para cada persona. Tu primera clase de prueba es gratis y la reservas en un minuto por WhatsApp.</p>
+      <div class="cta">
+        <a class="btn main" id="heroCta" data-wa data-msg="Hola, quiero reservar mi clase de prueba gratis en Estudio Mareas." href="#reservar">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+          Reservar mi clase gratis
+        </a>
+        <a class="btn line" href="#horarios">Ver horarios</a>
+      </div>
+      <ul class="facts">
+        <li>Máximo 6 personas por clase</li>
+        <li>Reformer nivel 1 y nivel 2</li>
+        <li>Sin matrícula ni contrato</li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="clases">
+    <div class="wrap">
+      <div class="head">
+        <h2>Cuatro clases, un mismo cuidado</h2>
+        <p>Si es tu primera vez, empieza por Reformer nivel 1 o Yoga vinyasa. Te decimos cuál te conviene según tu cuerpo y tu objetivo.</p>
+      </div>
+      <div class="classes">
+        <article class="cls">
+          <div><h3>Pilates reformer</h3><div class="meta">55 min · Nivel 1 y 2</div></div>
+          <p>Fuerza y control con resistencia de resortes. El nivel 1 enseña la técnica desde cero; el nivel 2 es para quien ya tiene base.<br><span class="start">Ideal para empezar (nivel 1)</span></p>
+        </article>
+        <article class="cls">
+          <div><h3>Pilates mat</h3><div class="meta">50 min · Todos los niveles</div></div>
+          <p>Ejercicios en colchoneta, sin máquina. Trabaja el centro del cuerpo, la postura y la movilidad de la espalda.</p>
+        </article>
+        <article class="cls">
+          <div><h3>Yoga vinyasa</h3><div class="meta">60 min · Todos los niveles</div></div>
+          <p>Secuencias fluidas que unen movimiento y respiración. Cada postura tiene una versión más suave si la necesitas.<br><span class="start">Ideal para empezar</span></p>
+        </article>
+        <article class="cls">
+          <div><h3>Yoga restaurativo</h3><div class="meta">60 min · Todos los niveles</div></div>
+          <p>Posturas sostenidas con apoyo de bloques y mantas, para soltar la tensión al final del día.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="horarios" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <h2>Horarios de la semana</h2>
+        <p>Elige un día y, si quieres, un tipo de clase. Los cupos son de ejemplo; en la versión real se actualizan con tu agenda.</p>
+      </div>
+      <div class="days" id="days" role="group" aria-label="Día de la semana"></div>
+      <div class="filters" id="filters" role="group" aria-label="Tipo de clase"></div>
+      <div class="slots" id="slots" aria-live="polite"></div>
+      <p class="note">Llega 10 minutos antes en tu primera clase para conocer el espacio.</p>
+    </div>
+  </section>
+
+  <section id="planes">
+    <div class="wrap">
+      <div class="head">
+        <h2>Planes</h2>
+        <p>Sin matrícula ni contrato. Los paquetes se pagan por Yape, Plin, transferencia o tarjeta.</p>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <div class="what"><h3>Clase de prueba</h3><span>Reformer nivel 1 o Yoga vinyasa, a tu elección</span></div>
+          <div class="price">Gratis</div>
+          <a class="btn main small" data-wa data-msg="Hola, quiero reservar mi clase de prueba gratis." href="#reservar">Reservar</a>
+        </div>
+        <div class="plan">
+          <div class="what"><h3>Clase suelta</h3><span>Una clase, la que prefieras</span></div>
+          <div class="price">S/ 75</div>
+          <a class="btn line small" data-wa data-msg="Hola, quiero reservar una clase suelta (S/ 75)." href="#reservar">Reservar</a>
+        </div>
+        <div class="plan">
+          <div class="what"><h3>8 clases<span class="tag">El más elegido</span></h3><span>Válidas por 30 días, a S/ 60 cada una</span></div>
+          <div class="price">S/ 480</div>
+          <a class="btn main small" data-wa data-msg="Hola, me interesa el paquete de 8 clases (S/ 480)." href="#reservar">Elegir</a>
+        </div>
+        <div class="plan">
+          <div class="what"><h3>12 clases</h3><span>Válidas por 45 días, a S/ 53 cada una</span></div>
+          <div class="price">S/ 640</div>
+          <a class="btn line small" data-wa data-msg="Hola, me interesa el paquete de 12 clases (S/ 640)." href="#reservar">Elegir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="estudio" class="alt">
+    <div class="wrap about">
+      <div class="head" style="margin:0">
+        <h2>Un estudio pequeño, a propósito</h2>
+        <p>Preferimos pocas personas por clase para corregirte la técnica a tiempo y que avances sin lesionarte.</p>
+      </div>
+      <dl>
+        <div><dt>Grupos de máximo 6</dt><dd>Cada instructora ve y corrige a todo el grupo.</dd></div>
+        <div><dt>Niveles separados</dt><dd>El nivel 1 y el nivel 2 no se mezclan en la misma clase.</dd></div>
+        <div><dt>Cuéntanos tus lesiones</dt><dd>Avísanos antes de empezar para adaptar los ejercicios.</dd></div>
+        <div><dt>Medias antideslizantes</dt><dd>Trae las tuyas o te prestamos un par la primera vez.</dd></div>
+        <div><dt>Ubicación</dt><dd>Barranco, Lima. La dirección exacta se envía al confirmar tu reserva.</dd></div>
+        <div><dt>Atención por WhatsApp</dt><dd>Lunes a sábado, de 7:00 a 20:00.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="preguntas">
+    <div class="wrap">
+      <div class="head">
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Nunca hice pilates, ¿puedo empezar?</summary>
+          <p>Sí. Reformer nivel 1 está pensado para aprender la técnica desde cero, y con 6 personas la instructora te guía en cada ejercicio.</p>
+        </details>
+        <details>
+          <summary>¿Qué llevo a mi primera clase?</summary>
+          <p>Ropa cómoda que te deje moverte, medias antideslizantes (si no tienes, te prestamos) y una botella de agua.</p>
+        </details>
+        <details>
+          <summary>¿Puedo cancelar o cambiar mi reserva?</summary>
+          <p>Sí, avísanos por WhatsApp con al menos 12 horas de anticipación y la clase no se descuenta de tu paquete.</p>
+        </details>
+        <details>
+          <summary>¿Tengo una lesión, puedo entrenar?</summary>
+          <p>Cuéntanos antes de empezar. Adaptamos los ejercicios y, si hace falta, te recomendamos consultar primero con tu médico o fisioterapeuta.</p>
+        </details>
+        <details>
+          <summary>¿Cómo pago?</summary>
+          <p>Por Yape, Plin, transferencia o tarjeta. Te enviamos los datos al confirmar tu reserva.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="reserve" id="reservar">
+    <div class="wrap">
+      <div class="box">
+        <h2>Reserva tu primera clase</h2>
+        <p>Escríbenos por WhatsApp con la clase y el día que prefieres. Te respondemos el mismo día en horario de atención.</p>
+        <a class="btn" data-wa data-msg="Hola, quiero reservar mi primera clase en Estudio Mareas." href="#reservar">Escribir por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a class="btn main float hide" id="float" data-wa data-msg="Hola, quiero reservar mi clase de prueba gratis en Estudio Mareas." href="#reservar">Reservar mi clase gratis</a>
+
+<footer>
+  <div class="wrap">
+    <div>Estudio Mareas · Barranco, Lima · <span id="year"></span></div>
+    <div>Página de ejemplo creada por @webs_48_. Los nombres, precios y horarios son ficticios.</div>
+  </div>
+</footer>
+
+<script>
+/* Para adaptar la página a un negocio real, cambia el enlace de WhatsApp aquí. */
+var WA="https://wa.link/zfmrv6";
+var SCHEDULE={
+  "Lun":[["07:00","Reformer nivel 1","55 min",3],["09:00","Yoga vinyasa","60 min",5],["18:30","Reformer nivel 2","55 min",2],["20:00","Yoga restaurativo","60 min",6]],
+  "Mar":[["07:00","Pilates mat","50 min",4],["12:30","Reformer nivel 1","55 min",3],["19:00","Yoga vinyasa","60 min",4]],
+  "Mié":[["07:00","Reformer nivel 2","55 min",1],["09:00","Reformer nivel 1","55 min",4],["18:30","Pilates mat","50 min",5],["20:00","Yoga restaurativo","60 min",6]],
+  "Jue":[["07:00","Yoga vinyasa","60 min",3],["12:30","Reformer nivel 1","55 min",2],["19:00","Reformer nivel 2","55 min",3]],
+  "Vie":[["07:00","Reformer nivel 1","55 min",2],["09:00","Pilates mat","50 min",6],["18:00","Yoga vinyasa","60 min",4]],
+  "Sáb":[["09:00","Reformer nivel 1","55 min",4],["10:30","Yoga vinyasa","60 min",5],["12:00","Pilates mat","50 min",6]]
+};
+var ORDER=["Lun","Mar","Mié","Jue","Vie","Sáb"];
+var FULL_NAMES={"Lun":"lunes","Mar":"martes","Mié":"miércoles","Jue":"jueves","Vie":"viernes","Sáb":"sábado"};
+var TYPES=[["Todas",null],["Reformer","Reformer"],["Mat","Pilates mat"],["Yoga","Yoga"]];
+var todayIdx=new Date().getDay();            /* 0 = domingo */
+var today=todayIdx===0?null:ORDER[todayIdx-1];
+var current=today||"Lun";
+var filter=null;
+
+/* Cada botón trae su mensaje en data-msg. wa.link no admite texto prellenado; si cambias WA
+   por "https://wa.me/51XXXXXXXXX", el mensaje de cada botón se escribe solo en el chat. */
+function wire(a){
+  var msg=a.getAttribute("data-msg");
+  a.href=(msg&&/wa\.me\//.test(WA))?WA+"?text="+encodeURIComponent(msg):WA;
+  a.target="_blank";a.rel="noopener";
+}
+function node(tag,cls,text){var n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n}
+
+function renderDays(){
+  var box=document.getElementById("days");box.textContent="";
+  ORDER.forEach(function(d){
+    var b=node("button",null,d);b.type="button";
+    if(d===today)b.appendChild(node("small",null,"hoy"));
+    b.setAttribute("aria-pressed",d===current?"true":"false");
+    b.setAttribute("aria-label",FULL_NAMES[d]+(d===today?", hoy":""));
+    b.addEventListener("click",function(){current=d;renderDays();renderSlots()});
+    box.appendChild(b);
+  });
+}
+function renderFilters(){
+  var box=document.getElementById("filters");box.textContent="";
+  TYPES.forEach(function(t){
+    var b=node("button",null,t[0]);b.type="button";
+    b.setAttribute("aria-pressed",filter===t[1]?"true":"false");
+    b.addEventListener("click",function(){filter=t[1];renderFilters();renderSlots()});
+    box.appendChild(b);
+  });
+}
+function renderSlots(){
+  var box=document.getElementById("slots");box.textContent="";
+  var list=SCHEDULE[current].filter(function(s){return !filter||s[1].indexOf(filter)===0});
+  if(!list.length){
+    box.appendChild(node("div","empty","No hay clases de este tipo el "+FULL_NAMES[current]+". Prueba con otro día."));
+    return;
+  }
+  list.forEach(function(s,i){
+    var row=node("div","slot");row.style.animationDelay=(i*40)+"ms";
+    row.appendChild(node("div","time",s[0]));
+    var what=node("div","what");
+    var b=node("b",null,s[1]);
+    b.appendChild(node("span",s[3]<=2?"cupos few":"cupos",s[3]===1?"Último cupo":s[3]+" cupos"));
+    what.appendChild(b);
+    what.appendChild(node("span",null,s[2]));
+    row.appendChild(what);
+    var go=node("a","btn line small go","Reservar");
+    go.setAttribute("data-msg","Hola, quiero reservar "+s[1]+" el "+FULL_NAMES[current]+" a las "+s[0]+".");
+    go.setAttribute("aria-label","Reservar "+s[1]+", "+FULL_NAMES[current]+" "+s[0]);
+    wire(go);
+    row.appendChild(go);
+    box.appendChild(row);
+  });
+}
+document.querySelectorAll("[data-wa]").forEach(wire);
+document.getElementById("year").textContent=new Date().getFullYear();
+renderDays();renderFilters();renderSlots();
+
+/* Cabecera con borde al hacer scroll; botón flotante cuando el botón principal sale de la vista
+   y se oculta al llegar a la sección de reserva. */
+var topbar=document.getElementById("topbar"),fl=document.getElementById("float");
+var heroVisible=true,reserveVisible=false;
+function syncFloat(){fl.classList.toggle("hide",heroVisible||reserveVisible)}
+if("IntersectionObserver" in window){
+  new IntersectionObserver(function(e){heroVisible=e[0].isIntersecting;syncFloat()}).observe(document.getElementById("heroCta"));
+  new IntersectionObserver(function(e){reserveVisible=e[0].isIntersecting;syncFloat()}).observe(document.getElementById("reservar"));
+}else{fl.classList.remove("hide")}
+window.addEventListener("scroll",function(){topbar.classList.toggle("scrolled",window.scrollY>8)},{passive:true});
+</script>
+</body>
+</html>
