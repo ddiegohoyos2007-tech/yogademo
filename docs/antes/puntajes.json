@@ -1,0 +1,25 @@
+{
+  "fecha": "2026-11-18T17:21:19.730Z",
+  "puntajes": {
+    "performance": 99,
+    "accessibility": 96,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metricas": {
+    "first-contentful-paint": "1.6 s",
+    "largest-contentful-paint": "1.6 s",
+    "total-blocking-time": "0 ms",
+    "cumulative-layout-shift": "0",
+    "speed-index": "1.6 s"
+  },
+  "auditorias_por_mejorar": [
+    "color-contrast",
+    "label-content-name-mismatch",
+    "render-blocking-resources",
+    "uses-text-compression",
+    "document-latency-insight",
+    "network-dependency-tree-insight",
+    "render-blocking-insight"
+  ]
+}

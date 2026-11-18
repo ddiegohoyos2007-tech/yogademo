@@ -1,0 +1,37 @@
+{
+  "375": {
+    "scrollWidth": 375,
+    "W": 375,
+    "over": [
+      "path.[object SVGAnimatedString]",
+      "path.[object SVGAnimatedString]",
+      "path.[object SVGAnimatedString]",
+      "BUTTON.",
+      "BUTTON."
+    ],
+    "imgs": [],
+    "errs": []
+  },
+  "768": {
+    "scrollWidth": 768,
+    "W": 768,
+    "over": [
+      "path.[object SVGAnimatedString]",
+      "path.[object SVGAnimatedString]",
+      "path.[object SVGAnimatedString]"
+    ],
+    "imgs": [],
+    "errs": []
+  },
+  "1440": {
+    "scrollWidth": 1440,
+    "W": 1440,
+    "over": [
+      "path.[object SVGAnimatedString]",
+      "path.[object SVGAnimatedString]",
+      "path.[object SVGAnimatedString]"
+    ],
+    "imgs": [],
+    "errs": []
+  }
+}
